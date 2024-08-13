@@ -13,7 +13,9 @@ const person = {
     // We declare methods this way...
     haveABirthdayParty: function() {
         console.log(`happy birthday, ${this.name}!`);
-        this.age++;
+        // this.age = this.age + 10; // this will age you 10 years
+        // this.age += 10; // this will also age you 10 years
+        this.age++; // This will age you one year
     }, 
     status: function() {
         console.log(`Person Status... Name: ${this.name}, Age: ${this.age}, Height: ${this.height}`);
