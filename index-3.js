@@ -1,7 +1,5 @@
 // Create person object
 
-var prompt = require('prompt-sync')();
-
 // factory function
 function createPerson(nameInput, ageInput, hairInput) {
   // Create an object based on the function arguments
@@ -26,12 +24,29 @@ function createPerson(nameInput, ageInput, hairInput) {
 let person1 = createPerson("Robert", 46, true);
 let person2 = createPerson("Kabrini", 36, true);
 let person3 = createPerson("Chris", 26, false);
+// let person4 = ...
+let house = [];
+house.push(person1);
+house.push(person2);
+house.push(person3);
+house.push(createPerson("Bob", 0, false));
 
-person1.haveABirthday();
-person2.haveABirthday();
-person3.haveABirthday();
-person1.status();
-person2.status();
-person3.hair = true;
-person3.status();
+let person5 = createPerson("Alice", 11, true);
+house[4] = person5;
+house[5] = createPerson("Craig", 4, true);
 
+house[0].haveABirthday();
+house[1].haveABirthday();
+house[2].haveABirthday();
+house[3].haveABirthday();
+// house[4].haveABirthday();
+person5.haveABirthday(); // can still access by old variable
+house[5].haveABirthday();
+
+console.log(house);
+
+// let animals = [];
+// animals.push("cat")
+// animals.push("dog")
+// animals.push("fish")
+// console.log(animals)
