@@ -60,6 +60,7 @@ secondGrade.forEach(person => person.status());
 // CONCEPT: an if statement nested in a for loop
 
 for(let i=0; i<secondGrade.length; i++){
+  // note: the expression in between the parens must be a boolean express. (That is, it evaluates to true or false)
   if(secondGrade[i].canHaveSugar === true) {
     secondGrade[i].haveABirthday();
   } else {
